@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="is_completed_options">
+        <item>It´s completed</item>
+        <item>It´s not completed</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Task Manager Application</string>
+    <style name="Base.Theme.TaskManagerApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.TaskManagerApplication" parent="Base.Theme.TaskManagerApplication"/>
+</resources>

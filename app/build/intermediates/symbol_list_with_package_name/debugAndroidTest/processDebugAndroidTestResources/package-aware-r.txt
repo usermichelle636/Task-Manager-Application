@@ -1,0 +1,3 @@
+com.example.taskmanagerapplication.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

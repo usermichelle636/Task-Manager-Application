@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Task Manager Application</string>
+
+    <string-array name="is_completed_options">
+        <item>It´s completed</item>
+        <item>It´s not completed</item>
+    </string-array>"
+</resources>
