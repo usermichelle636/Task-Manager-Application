@@ -1,5 +1,5 @@
-com.example.taskmanagerapplication.test.app-core-1.7.0-0 C:\Users\Michelle\.gradle\caches\8.13\transforms\117625d24045c80158cc51f693e276d1\transformed\core-1.7.0\res
-com.example.taskmanagerapplication.test.app-tracing-1.2.0-1 C:\Users\Michelle\.gradle\caches\8.13\transforms\9e990b17de8ce8e28f12aad7e6cf5bb0\transformed\tracing-1.2.0\res
+com.example.taskmanagerapplication.test.app-core-1.7.0-0 C:\Users\Michelle\.gradle\caches\8.13\transforms\86a97509f8c7329f4ad990366c1ecc63\transformed\core-1.7.0\res
+com.example.taskmanagerapplication.test.app-tracing-1.2.0-1 C:\Users\Michelle\.gradle\caches\8.13\transforms\ae0ae481e732961888439756ff0a3102\transformed\tracing-1.2.0\res
 com.example.taskmanagerapplication.test.app-androidTest-2 C:\Users\Michelle\AndroidStudioProjects\TaskManagerApplication\app\build\generated\res\resValues\androidTest\debug
 com.example.taskmanagerapplication.test.app-updated_navigation_xml-3 C:\Users\Michelle\AndroidStudioProjects\TaskManagerApplication\app\build\generated\updated_navigation_xml\debugAndroidTest
 com.example.taskmanagerapplication.test.app-mergeDebugAndroidTestResources-4 C:\Users\Michelle\AndroidStudioProjects\TaskManagerApplication\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir

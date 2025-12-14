@@ -4,6 +4,10 @@
         "source": "com.example.taskmanagerapplication.app-main-38:/layout/activity_main.xml"
     },
     {
+        "merged": "com.example.taskmanagerapplication.app-debug-36:/layout_activity_update_task.xml.flat",
+        "source": "com.example.taskmanagerapplication.app-main-38:/layout/activity_update_task.xml"
+    },
+    {
         "merged": "com.example.taskmanagerapplication.app-debug-36:/layout_activity_add_task.xml.flat",
         "source": "com.example.taskmanagerapplication.app-main-38:/layout/activity_add_task.xml"
     },

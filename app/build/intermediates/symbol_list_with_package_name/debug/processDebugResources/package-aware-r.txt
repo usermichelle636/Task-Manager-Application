@@ -3760,6 +3760,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnSave
+id btnUpdate
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -4310,6 +4311,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_task
 layout activity_main
+layout activity_update_task
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4395,6 +4397,8 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string TASK_ERROR
+string TASK_SAVE
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4422,6 +4426,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string addTask
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -4441,6 +4446,8 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string description
+string empty_title_error
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
@@ -4448,6 +4455,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string isCompleted
 string item_view_role_description
 string m3_exceed_max_badge_text_suffix
 string m3_loading_indicator_content_description
@@ -4561,6 +4569,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string save
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4568,6 +4577,8 @@ string searchview_navigation_content_description
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string tittle
+string update
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

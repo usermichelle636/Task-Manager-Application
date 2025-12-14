@@ -31,11 +31,36 @@ public class TaskController {
         return taskDao.getAllTasks();
     }
 
-    public void updateTask(Task task) {
-        taskDao.update(task);
+    public Task getTaskById(int id) {
+        return taskDao.getTaskById(id);
     }
 
-    public void deleteTask(Task task) {
-        taskDao.delete(task);
+    public boolean updateTask(int id, String title, String description, String isCompleted) {
+        try {
+            Log.d("TASK_UPDATE", "Updating task with id: " + id);
+            Task task = taskDao.getTaskById(id);
+            if (task != null) {
+                Log.d("TASK_UPDATE", "Task found: " + task.taskTitle);
+                task.taskTitle = title;
+                task.taskDescription = description;
+                task.isCompleted = isCompleted;
+                taskDao.update(task);
+                Log.i("TASK_UPDATE", "Task updated successfully");
+                return true;
+            } else {
+                Log.e("TASK_UPDATE", "Task with id " + id + " not found.");
+                return false;
+            }
+        } catch (Exception e) {
+            Log.e("TASK_ERROR", "Error updating task: " + e.getMessage(), e);
+            return false;
+        }
+    }
+
+    public void deleteTask(int id) {
+        Task task = taskDao.getTaskById(id);
+        if (task != null) {
+            taskDao.delete(task);
+        }
     }
 }

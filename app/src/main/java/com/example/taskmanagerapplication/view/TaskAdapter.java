@@ -17,10 +17,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder> {
 
     private final List<Task> taskList = new ArrayList<>();
+    private OnTaskClickListener onTaskClickListener;
+
+    public void setOnTaskClickListener(OnTaskClickListener onTaskClickListener) {
+        this.onTaskClickListener = onTaskClickListener;
+    }
 
     public void setTasks(List<Task> tasks) {
         taskList.clear();
@@ -46,12 +50,19 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault());
         String dateString = formatter.format(new Date(task.createdAt));
         holder.txtCreatedAt.setText(dateString);
+
+        holder.itemView.setOnClickListener(v -> {
+            if (onTaskClickListener != null) {
+                onTaskClickListener.onTaskClick(task);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return taskList.size();
     }
+
     public static class TaskViewHolder extends RecyclerView.ViewHolder {
         TextView txtTitle;
         TextView txtDescription;
@@ -67,4 +78,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         }
     }
 
+    public interface OnTaskClickListener {
+        void onTaskClick(Task task);
+    }
 }

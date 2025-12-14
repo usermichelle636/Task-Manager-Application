@@ -180,6 +180,56 @@ public final class TaskDao_Impl implements TaskDao {
     });
   }
 
+  @Override
+  public Task getTaskById(final int id) {
+    final String _sql = "SELECT * FROM tasks WHERE id = ?";
+    return DBUtil.performBlocking(__db, true, false, (_connection) -> {
+      final SQLiteStatement _stmt = _connection.prepare(_sql);
+      try {
+        int _argIndex = 1;
+        _stmt.bindLong(_argIndex, id);
+        final int _columnIndexOfId = SQLiteStatementUtil.getColumnIndexOrThrow(_stmt, "id");
+        final int _columnIndexOfTaskTitle = SQLiteStatementUtil.getColumnIndexOrThrow(_stmt, "task_title");
+        final int _columnIndexOfTaskDescription = SQLiteStatementUtil.getColumnIndexOrThrow(_stmt, "task_description");
+        final int _columnIndexOfCreatedAt = SQLiteStatementUtil.getColumnIndexOrThrow(_stmt, "created_at");
+        final int _columnIndexOfIsCompleted = SQLiteStatementUtil.getColumnIndexOrThrow(_stmt, "isCompleted");
+        final Task _result;
+        if (_stmt.step()) {
+          final String _tmpTaskTitle;
+          if (_stmt.isNull(_columnIndexOfTaskTitle)) {
+            _tmpTaskTitle = null;
+          } else {
+            _tmpTaskTitle = _stmt.getText(_columnIndexOfTaskTitle);
+          }
+          final String _tmpTaskDescription;
+          if (_stmt.isNull(_columnIndexOfTaskDescription)) {
+            _tmpTaskDescription = null;
+          } else {
+            _tmpTaskDescription = _stmt.getText(_columnIndexOfTaskDescription);
+          }
+          final String _tmpIsCompleted;
+          if (_stmt.isNull(_columnIndexOfIsCompleted)) {
+            _tmpIsCompleted = null;
+          } else {
+            _tmpIsCompleted = _stmt.getText(_columnIndexOfIsCompleted);
+          }
+          _result = new Task(_tmpTaskTitle,_tmpTaskDescription,_tmpIsCompleted);
+          _result.id = (int) (_stmt.getLong(_columnIndexOfId));
+          if (_stmt.isNull(_columnIndexOfCreatedAt)) {
+            _result.createdAt = null;
+          } else {
+            _result.createdAt = _stmt.getLong(_columnIndexOfCreatedAt);
+          }
+        } else {
+          _result = null;
+        }
+        return _result;
+      } finally {
+        _stmt.close();
+      }
+    });
+  }
+
   @NonNull
   public static List<Class<?>> getRequiredConverters() {
     return Collections.emptyList();

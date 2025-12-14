@@ -27,7 +27,7 @@ public class AddTask extends AppCompatActivity {
         btnSave.setOnClickListener(view -> {
             String title = etTitle.getText().toString();
             if (title.isEmpty()) {
-                Toast.makeText(this, "El título no puede estar vacío", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.empty_title_error), Toast.LENGTH_SHORT).show();
                 return;
             }
             String description = etDescription.getText().toString();
@@ -40,11 +40,11 @@ public class AddTask extends AppCompatActivity {
         TaskController taskController = new TaskController(this);
         boolean success = taskController.addTask(title, description, isCompleted);
         if (success) {
-            Toast.makeText(this, "Task saved successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.TASK_SAVE), Toast.LENGTH_SHORT).show();
             clearFields();
             showMainActivity();
         } else {
-            Toast.makeText(this, "Error saving task", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.TASK_ERROR), Toast.LENGTH_SHORT).show();
         }
     }
 

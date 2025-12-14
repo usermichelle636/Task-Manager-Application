@@ -6,7 +6,16 @@
     </string-array>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="TASK_ERROR">Error saving task</string>
+    <string name="TASK_SAVE">Task saved successfully</string>
+    <string name="addTask">AddTask</string>
     <string name="app_name">Task Manager Application</string>
+    <string name="description">Description</string>
+    <string name="empty_title_error">Please enter a title</string>
+    <string name="isCompleted">It´s completed or It´s not completed</string>
+    <string name="save">Save</string>
+    <string name="tittle">Tittle</string>
+    <string name="update">Update</string>
     <style name="Base.Theme.TaskManagerApplication" parent="Theme.Material3.DayNight.NoActionBar">
         
         

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TaskManagerApplication">
         <activity
+            android:name=".UpdateTask"
+            android:exported="false" />
+        <activity
             android:name=".AddTask"
             android:exported="false" />
         <activity
